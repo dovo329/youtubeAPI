@@ -153,6 +153,7 @@ topicDetails: 2*/
         
         cell?.textLabel!.text = commentArray[indexPath.row].author
         cell?.detailTextLabel!.text = commentArray[indexPath.row].commentText
+        cell?.layoutSubviews()
         
         return cell!
     }
