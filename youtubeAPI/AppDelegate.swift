@@ -9,10 +9,6 @@
 import UIKit
 import CoreData
 
-let googleProjectId = "fine-gradient-103823"
-let googleProjectNumber = "104439241166"
-let googleAPIKey = "AIzaSyBDTts7_p_IEf1v0sJGGH-t8EfU4B2fCn0"
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
