@@ -45,7 +45,14 @@ topicDetails: 2*/
         //first query the youtube video
         //let videoQuery = baseURL+"videos?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails,fileDetails,id,liveStreamingDetails,player,processingDetails,recordingDetails,snippet,statistics,status,suggestions,topicDetails"
         let videoQuery = baseURL+"videos?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails,id,liveStreamingDetails,player,recordingDetails,snippet,statistics,status,topicDetails"
-        queryWithUrlString(videoQuery)
+        
+        //let commentQuery = baseURL+"comments?parentId="+kVideoId+"&key="+googleAPIKey+"&part=id,snippet"
+        
+        //GET https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=KYVdf5xyD8I&key={YOUR_API_KEY}
+        
+        let commentQuery = baseURL+"commentThreads?part=id,replies,snippet"+"&videoId="+kVideoId+"&key="+googleAPIKey
+        //queryWithUrlString(videoQuery)
+        queryWithUrlString(commentQuery)
     }
     
     func queryWithUrlString(urlString : String)
