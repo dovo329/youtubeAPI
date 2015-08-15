@@ -12,7 +12,8 @@ let kVideoId = "KYVdf5xyD8I"
 let baseURL = "https://www.googleapis.com/youtube/v3/videos"
 let googleProjectId = "fine-gradient-103823"
 let googleProjectNumber = "104439241166"
-let googleAPIKey = "AIzaSyBDTts7_p_IEf1v0sJGGH-t8EfU4B2fCn0"
+//let googleAPIKey = "AIzaSyBDTts7_p_IEf1v0sJGGH-t8EfU4B2fCn0"
+let googleAPIKey = "AIzaSyDKqdgKxGSqu2pCwdeI3rzgYEMbGpATzuc"
 
 class ViewController: UIViewController {
 
