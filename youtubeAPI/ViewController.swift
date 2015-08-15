@@ -28,6 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        navigationItem.title = "Comments for Video Id "+kVideoId
+        
         // example: https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=YOUR_API_KEY&part=snippet,contentDetails,statistics,status
         
         let testUrl = "https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyC24Fn9iz7_iCEwpQTD4TCZfraZRUO5Szk&part=snippet,contentDetails,statistics,status"
