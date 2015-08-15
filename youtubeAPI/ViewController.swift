@@ -19,6 +19,8 @@ let googleAPIKey = "AIzaSyC24Fn9iz7_iCEwpQTD4TCZfraZRUO5Szk"
 
 class ViewController: UIViewController {
 
+    var commentArray = [Comment]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -82,6 +84,9 @@ topicDetails: 2*/
                                 dispatch_async(
                                     dispatch_get_main_queue(),
                                     { () -> Void in
+                                        
+                                        self.commentArray = [Comment]()
+                                        
                                         for dict in dictArr
                                         {
                                             if let dict = dict as? NSDictionary
@@ -94,9 +99,12 @@ topicDetails: 2*/
                                                 let snippet2 = topLevelComment["snippet"] as! NSDictionary
                                                 //println("snippet2=\(snippet2)")
                                                 let comment = Comment(author: snippet2["authorDisplayName"] as! String, commentText: snippet2["textDisplay"] as! String)
-                                                comment.print()
+                                                //comment.print()
+                                                self.commentArray.append(comment)
                                             }
                                         }
+                                        
+                                        //println("comment count=\(self.commentArray.count)")
                                     }
                                 )
                             } else {
