@@ -8,6 +8,9 @@
 
 import UIKit
 
+let kVideoId = "KYVdf5xyD8I"
+let baseURL = "https://www.googleapis.com/youtube/v3/videos"
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
