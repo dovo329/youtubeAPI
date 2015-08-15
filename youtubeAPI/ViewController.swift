@@ -9,11 +9,12 @@
 import UIKit
 
 let kVideoId = "KYVdf5xyD8I"
-let baseURL = "https://www.googleapis.com/youtube/v3/videos"
+let baseURL = "https://www.googleapis.com/youtube/v3/comments"
 let googleProjectId = "fine-gradient-103823"
 let googleProjectNumber = "104439241166"
 //let googleAPIKey = "AIzaSyBDTts7_p_IEf1v0sJGGH-t8EfU4B2fCn0"
-let googleAPIKey = "AIzaSyDKqdgKxGSqu2pCwdeI3rzgYEMbGpATzuc"
+//let googleAPIKey = "AIzaSyDKqdgKxGSqu2pCwdeI3rzgYEMbGpATzuc"
+let googleAPIKey = "AIzaSyBfxeuH7DEu7RIZ_d6uoc91D7PZIMCJ_ow"
 
 class ViewController: UIViewController {
 
@@ -23,11 +24,12 @@ class ViewController: UIViewController {
         
         // example: https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=YOUR_API_KEY&part=snippet,contentDetails,statistics,status
         
-        queryWithUrlString(baseURL+"?id="+kVideoId+"&key="+googleAPIKey+"&part=snippet,contentDetails,statistics,status")
+        queryWithUrlString(baseURL+"?id="+kVideoId+"&key="+googleAPIKey)
     }
     
     func queryWithUrlString(urlString : String)
     {
+        println("urlString=\(urlString)")
         if let nsUrl = NSURL(string: urlString)
         {
             let session = NSURLSession.sharedSession()
