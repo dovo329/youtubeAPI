@@ -9,7 +9,7 @@
 import UIKit
 
 let kVideoId = "KYVdf5xyD8I"
-let baseURL = "https://www.googleapis.com/youtube/v3/comments"
+let baseURL = "https://www.googleapis.com/youtube/v3/"
 let googleProjectId = "fine-gradient-103823"
 let googleProjectNumber = "104439241166"
 //let googleAPIKey = "AIzaSyBDTts7_p_IEf1v0sJGGH-t8EfU4B2fCn0"
@@ -27,8 +27,25 @@ class ViewController: UIViewController {
         
         let testUrl = "https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyC24Fn9iz7_iCEwpQTD4TCZfraZRUO5Szk&part=snippet,contentDetails,statistics,status"
         
-        //queryWithUrlString(baseURL+"?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails")
-        queryWithUrlString(testUrl)
+        //queryWithUrlString(baseURL+"/comments"+"?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails")
+        //queryWithUrlString(testUrl)
+        
+/*contentDetails: 2
+fileDetails: 1
+id: 0
+liveStreamingDetails: 2
+player: 0
+processingDetails: 1
+recordingDetails: 2
+snippet: 2
+statistics: 2
+status: 2
+suggestions: 1
+topicDetails: 2*/
+        //first query the youtube video
+        //let videoQuery = baseURL+"videos?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails,fileDetails,id,liveStreamingDetails,player,processingDetails,recordingDetails,snippet,statistics,status,suggestions,topicDetails"
+        let videoQuery = baseURL+"videos?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails,id,liveStreamingDetails,player,recordingDetails,snippet"
+        queryWithUrlString(videoQuery)
     }
     
     func queryWithUrlString(urlString : String)
