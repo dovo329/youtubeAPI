@@ -17,6 +17,7 @@ let googleProjectNumber = "104439241166"
 //let googleAPIKey = "AIzaSyBfxeuH7DEu7RIZ_d6uoc91D7PZIMCJ_ow"
 let googleAPIKey = "AIzaSyC24Fn9iz7_iCEwpQTD4TCZfraZRUO5Szk"
 let kCellId = "cell.id"
+let kSegueId = "segue.to.detail"
 
 class ViewController: UIViewController, UITableViewDataSource {
 
@@ -154,5 +155,15 @@ topicDetails: 2*/
         cell?.detailTextLabel!.text = commentArray[indexPath.row].commentText
         
         return cell!
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destinationViewController = segue.destinationViewController as? DetailViewController {
+            
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)!
+            let comment = commentArray[indexPath.row]
+            destinationViewController.comment = comment
+        }
     }
 }

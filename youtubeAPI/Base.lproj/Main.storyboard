@@ -40,6 +40,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vNQ-et-BFR" kind="show" id="Kk8-5q-K5K"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -63,6 +66,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071" y="237"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="ddv-ht-uH1">
+            <objects>
+                <viewController id="vNQ-et-BFR" userLabel="Detail View Controller" customClass="DetailViewController" customModule="youtubeAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zNR-gw-pXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="z2e-7O-Ijp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AcR-iI-Ed2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-kw-6Id">
+                                <rect key="frame" x="16" y="-15" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="PzJ-kw-6Id" secondAttribute="centerY" constant="15" id="6nZ-x8-MAF"/>
+                            <constraint firstItem="PzJ-kw-6Id" firstAttribute="width" secondItem="AcR-iI-Ed2" secondAttribute="width" id="AHX-iL-isA"/>
+                            <constraint firstItem="PzJ-kw-6Id" firstAttribute="height" secondItem="AcR-iI-Ed2" secondAttribute="height" id="ZVZ-vO-KKm"/>
+                            <constraint firstAttribute="centerX" secondItem="PzJ-kw-6Id" secondAttribute="centerX" constant="-16" id="mZo-ZG-iDt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="m1D-Sa-wD7"/>
+                    <connections>
+                        <outlet property="textView" destination="PzJ-kw-6Id" id="B2o-sA-xoI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HfH-7a-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDP-vt-xZ0">

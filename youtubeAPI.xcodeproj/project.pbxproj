@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A544DDCE1B7EDCBC0095FE86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A544DDCD1B7EDCBC0095FE86 /* DetailViewController.swift */; };
 		A55718F21B7ED6F600C8E819 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55718F11B7ED6F600C8E819 /* Comment.swift */; };
 		A5A025361B7EB5E000345E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A025351B7EB5E000345E99 /* AppDelegate.swift */; };
 		A5A025391B7EB5E000345E99 /* youtubeAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5A025371B7EB5E000345E99 /* youtubeAPI.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A544DDCD1B7EDCBC0095FE86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A55718F11B7ED6F600C8E819 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A5A025301B7EB5E000345E99 /* youtubeAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youtubeAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A025341B7EB5E000345E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				A5A025581B7EBB8800345E99 /* Global.swift */,
 				A55718F11B7ED6F600C8E819 /* Comment.swift */,
 				A5A0253C1B7EB5E000345E99 /* Main.storyboard */,
+				A544DDCD1B7EDCBC0095FE86 /* DetailViewController.swift */,
 				A5A0253F1B7EB5E000345E99 /* Images.xcassets */,
 				A5A025411B7EB5E000345E99 /* LaunchScreen.xib */,
 				A5A025371B7EB5E000345E99 /* youtubeAPI.xcdatamodeld */,
@@ -224,6 +227,7 @@
 				A55718F21B7ED6F600C8E819 /* Comment.swift in Sources */,
 				A5A025591B7EBB8800345E99 /* Global.swift in Sources */,
 				A5A0253B1B7EB5E000345E99 /* ViewController.swift in Sources */,
+				A544DDCE1B7EDCBC0095FE86 /* DetailViewController.swift in Sources */,
 				A5A025391B7EB5E000345E99 /* youtubeAPI.xcdatamodeld in Sources */,
 				A5A025361B7EB5E000345E99 /* AppDelegate.swift in Sources */,
 			);
