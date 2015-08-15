@@ -44,7 +44,7 @@ suggestions: 1
 topicDetails: 2*/
         //first query the youtube video
         //let videoQuery = baseURL+"videos?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails,fileDetails,id,liveStreamingDetails,player,processingDetails,recordingDetails,snippet,statistics,status,suggestions,topicDetails"
-        let videoQuery = baseURL+"videos?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails,id,liveStreamingDetails,player,recordingDetails,snippet"
+        let videoQuery = baseURL+"videos?id="+kVideoId+"&key="+googleAPIKey+"&part=contentDetails,id,liveStreamingDetails,player,recordingDetails,snippet,statistics,status,topicDetails"
         queryWithUrlString(videoQuery)
     }
     
