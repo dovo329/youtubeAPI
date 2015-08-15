@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         // example: https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=YOUR_API_KEY&part=snippet,contentDetails,statistics,status
         
-        queryWithUrlString(baseURL+"?id="+kVideoId+"="+googleAPIKey+"&part=snippet,contentDetails,statistics,status")
+        queryWithUrlString(baseURL+"?id="+kVideoId+"&key="+googleAPIKey+"&part=snippet,contentDetails,statistics,status")
     }
     
     func queryWithUrlString(urlString : String)
