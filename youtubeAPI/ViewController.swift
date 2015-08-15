@@ -16,10 +16,13 @@ let googleProjectNumber = "104439241166"
 //let googleAPIKey = "AIzaSyDKqdgKxGSqu2pCwdeI3rzgYEMbGpATzuc"
 //let googleAPIKey = "AIzaSyBfxeuH7DEu7RIZ_d6uoc91D7PZIMCJ_ow"
 let googleAPIKey = "AIzaSyC24Fn9iz7_iCEwpQTD4TCZfraZRUO5Szk"
+let kCellId = "cell.id"
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
     var commentArray = [Comment]()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +108,7 @@ topicDetails: 2*/
                                         }
                                         
                                         //println("comment count=\(self.commentArray.count)")
+                                        self.tableView.reloadData()
                                     }
                                 )
                             } else {
@@ -135,5 +139,18 @@ topicDetails: 2*/
         } else {
             alertWithTitle("NSURL Creation Failed", message: "", dismissText: "Okay", viewController: self)
         }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return commentArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(kCellId, forIndexPath: indexPath) as? UITableViewCell
+        
+        cell?.textLabel!.text = commentArray[indexPath.row].author
+        cell?.detailTextLabel!.text = commentArray[indexPath.row].commentText
+        
+        return cell!
     }
 }
