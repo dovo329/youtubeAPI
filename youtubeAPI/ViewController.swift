@@ -50,7 +50,7 @@ topicDetails: 2*/
         
         //GET https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=KYVdf5xyD8I&key={YOUR_API_KEY}
         
-        let commentQuery = baseURL+"commentThreads?part=id,replies,snippet"+"&videoId="+kVideoId+"&key="+googleAPIKey
+        let commentQuery = baseURL+"commentThreads?part=snippet"+"&videoId="+kVideoId+"&key="+googleAPIKey
         //queryWithUrlString(videoQuery)
         queryWithUrlString(commentQuery)
     }
@@ -70,13 +70,13 @@ topicDetails: 2*/
                         
                         if let jsonObject = jsonObject as? [String:AnyObject]
                         {
-                            dispatch_async(
+                            /*dispatch_async(
                                 dispatch_get_main_queue(),
                                 { () -> Void in
                                     println("\(jsonObject)")
                                 }
-                            )
-                            /*if let dictArr = jsonObject["results"] as? NSArray
+                            )*/
+                            if let dictArr = jsonObject["items"] as? NSArray
                             {
                                 // update UI is on the main thread
                                 dispatch_async(
@@ -86,7 +86,15 @@ topicDetails: 2*/
                                         {
                                             if let dict = dict as? NSDictionary
                                             {
-                                                println("\(dict)")
+                                                //println("\(dict)")
+                                                let snippet = dict["snippet"] as! NSDictionary;
+                                                //println("snippet=\(snippet)")
+                                                let topLevelComment = snippet["topLevelComment"] as! NSDictionary
+                                                //println("topLevelComment=\(topLevelComment)")
+                                                let snippet2 = topLevelComment["snippet"] as! NSDictionary
+                                                //println("snippet2=\(snippet2)")
+                                                let comment = Comment(author: snippet2["authorDisplayName"] as! String, commentText: snippet2["textDisplay"] as! String)
+                                                comment.print()
                                             }
                                         }
                                     }
@@ -98,7 +106,7 @@ topicDetails: 2*/
                                     { () -> Void in
                                         alertWithTitle("JSON Array Cast Failed", message: "", dismissText: "Okay", viewController: self)
                                 })
-                            }*/
+                            }
                         } else {
                             // no data returned from server
                             dispatch_async(
